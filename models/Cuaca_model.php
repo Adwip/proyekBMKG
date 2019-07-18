@@ -70,7 +70,7 @@ class Cuaca_model extends CI_Model
 public function hariann($tanggal){
     $jam=date('H:i');
     $wilayah = array('Yogyakarta', 'Sleman','Bantul','Kulonprogo','Gunungkidul');
-    $cuaca=array('Cerah'=>'cerah-am.png','Berawan'=>'berawan-am.png','Udara kabur'=>'berawan tebal-pm.png','Kabut'=>'kabut-am.png','Cerah berawan'=>'cerah berawan-am.png','Hujan ringan'=>'hujan ringan-am.png','Hujan lebat'=>'hujan lebat-am.png','Hujan petir'=>'hujan petir-am.png','Hujan lokal'=>'hujan lokal-am.png','Hujan sedang'=>'hujan sedang-am.png');
+    $cuaca=array('Cerah'=>'cerah-am.png','Berawan'=>'berawan-am.png','Udara kabur'=>'berawan tebal-pm.png','Kabut'=>'kabut-am.png','Cerah berawan'=>'cerah berawan-am.png','Hujan ringan'=>'hujan ringan-am.png','Hujan lebat'=>'hujan lebat-am.png','Hujan petir'=>'hujan petir-am.png','Hujan lokal'=>'hujan lokal-am.png','Hujan sedang'=>'hujan sedang-am.png','Panas'=>'cerah-am.png');
 
         $angin=array('North (Utara)'=>'wi-towards-n','NNE'=>'wi-towards-nne','NE (Timur Laut)'=>'wi-towards-ne','ENE'=>'wi-towards-ene','East (Timur)'=>'wi-towards-e','ESE'=>'wi-towards-ese','SE (Tenggara)'=>'wi-towards-se','SSE'=>'wi-towards-sse','South (Selatan)'=>'wi-towards-s','SSW'=>'wi-towards-ssw','SW (Baratdaya)'=>'wi-towards-sw','NNW'=>'wi-towards-nnw');
     $tabel=null;
