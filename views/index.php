@@ -33,7 +33,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<img class="d-block w-100" src="<?php echo base_url()."../File_BMKG/Berita/".$beritas->foto;
 									?>" style="width:40px;height:400px;">
 								<div class="carousel-caption d-none d-md-block">
-									<h5 class="font-weight-bold" style="text-align: left;"><a href="<?php echo site_url('publikasi/berita') ?>" style="text-decoration: none;color: white;"><?php echo $beritas->judul;  ?></h5>
+									<h5 class="font-weight-bold" style="text-align: left;"><a href="<?php echo site_url('publikasi/detailberita?id=').$beritas->id_berita ?>" style="text-decoration: none;color: white;"><?php echo $beritas->judul;  ?></h5>
 								</div>
 							</div>
 							<?php endforeach;?>
@@ -55,24 +55,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<div id="list-cuaca">
 							<ul id="daftar-cuaca">
 							<li align="center" class="box-cuaca" style="background-color: #e1eafa;">
-									<img style="margin-top: 8px;" width="65" height="90" src="http://localhost/kp/asset/img/logo_BMKG.PNG" alt=""><br><br>
+									<img style="margin-top: 8px;" width="65" height="90" src="<?php echo base_url('asset/img/logo_BMKG.PNG') ?>" alt=""><br><br>
+									<h6>Data belum ada</h6>
+									<h5><strong>Pagi</strong></h5>
+								</li>
+								<li align="center" class="box-cuaca" style="background-color: #e1eafa;">
+									<img style="margin-top: 8px;" width="65" height="90" src="<?php echo base_url('asset/img/logo_BMKG.PNG') ?>" alt=""><br><br>
+									<h6>Data belum ada</h6>
+									<h5><strong>Siang</strong></h5>
+								</li>
+								<li align="center" class="box-cuaca" style="background-color: #e1eafa;">
+									<img style="margin-top: 8px;" width="65" height="90" src="<?php echo base_url('asset/img/logo_BMKG.PNG') ?>" alt=""><br><br>
 									<h6>Data belum ada</h6>
 									<h5><strong>Malam</strong></h5>
 								</li>
 								<li align="center" class="box-cuaca" style="background-color: #e1eafa;">
-									<img style="margin-top: 8px;" width="65" height="90" src="http://localhost/kp/asset/img/logo_BMKG.PNG" alt=""><br><br>
+									<img style="margin-top: 8px;" width="65" height="90" src="<?php echo base_url('asset/img/logo_BMKG.PNG') ?>" alt=""><br><br>
 									<h6>Data belum ada</h6>
-									<h5><strong>Malam</strong></h5>
-								</li>
-								<li align="center" class="box-cuaca" style="background-color: #e1eafa;">
-									<img style="margin-top: 8px;" width="65" height="90" src="http://localhost/kp/asset/img/logo_BMKG.PNG" alt=""><br><br>
-									<h6>Data belum ada</h6>
-									<h5><strong>Malam</strong></h5>
-								</li>
-								<li align="center" class="box-cuaca" style="background-color: #e1eafa;">
-									<img style="margin-top: 8px;" width="65" height="90" src="http://localhost/kp/asset/img/logo_BMKG.PNG" alt=""><br><br>
-									<h6>Data belum ada</h6>
-									<h5><strong>Malam</strong></h5>
+									<h5><strong>Dini hari</strong></h5>
 								</li>
 							</ul>
 						</div>
@@ -281,9 +281,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		list[i]=''
 		for (var l = 0; l < 4; l++) {
 			if (cuaca[i][l]!=null) {
-				list[i] += '<li align="center" class="box-cuaca" style="background-color: #e1eafa;" >									<img width="100" height="100" src="'+path+cuaca[i][l]['Cuaca']+'" alt=""><br>							<small>'+cuaca[i][l]['Jenis']+'</small><br>																<small>'+cuaca[i][l]['suhu_min']+' °C - '+cuaca[i][l]['suhu_maks']+' °C || '+cuaca[i][l]				['kelembapan_min']+'% - '+cuaca[i][l]['kelembapan_maks']+'%</small>										<h5><strong>Pagi</strong></h5>																		</li>'
+				list[i] += '<li align="center" class="box-cuaca" style="background-color: #e1eafa;" >									<img width="100" height="100" src="'+path+cuaca[i][l]['Cuaca']+'" alt=""><br>							<small>'+cuaca[i][l]['Jenis']+'</small><br>																<small>'+cuaca[i][l]['suhu_min']+' °C - '+cuaca[i][l]['suhu_maks']+' °C || '+cuaca[i][l]				['kelembapan_min']+'% - '+cuaca[i][l]['kelembapan_maks']+'%</small>										<h5><strong>'+waktu[l]+'</strong></h5>																		</li>'
 			}else{
-				list[i] += '<li align="center" class="box-cuaca" style="background-color: #e1eafa;">									<img style="margin-top: 8px;" width="65" height="90" src="'+bmkg+'" alt=""><br><br>									<h6>Data belum ada</h6>																					<h5><strong>Malam</strong></h5>																	</li>'
+				list[i] += '<li align="center" class="box-cuaca" style="background-color: #e1eafa;">									<img style="margin-top: 8px;" width="65" height="90" src="'+bmkg+'" alt=""><br><br>									<h6>Data belum ada</h6>																					<h5><strong>'+waktu[l]+'</strong></h5>																	</li>'
 			}
 		}
 	}

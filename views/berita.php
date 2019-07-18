@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				</div>
 				<div class="col">
 					<div class="judul-berita">
-						<h3><a href="<?php echo base_url().('index.php/publikasi/detailberita?id=').$berita->id_berita ?>"><strong><?php echo $berita->judul;  ?></strong></a></h3>
+						<h3><a href="<?php echo site_url('publikasi/detailberita?id=').$berita->id_berita ?>"><strong><?php echo $berita->judul;  ?></strong></a></h3>
 					</div>
 					<div class="isi">
 						
